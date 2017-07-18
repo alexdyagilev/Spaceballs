@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Neptune</title>
+	<!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!--My CSS Stylesheet link-->
+    <link rel='stylesheet' type='text/css' href='../css/style.css'>
+</head>
+<body>
+
+	<div class="container">
+		<div class="col-md-12">
+			<img src="../img/planets/neptune_title.png">
+		</div>
+		<div class="col-md-5">
+			<img src="../img/planets/neptune_big.png">
+		</div>
+		<div class="col-md-2"></div>
+		<div class="col-md-5">
+		<div class="row">
+		<div class="col-md-12">
+			<p>Neptune is the eighth and farthest known planet from the Sun in the Solar System. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet. Neptune is 17 times the mass of Earth and is slightly more massive than its near-twin Uranus, which is 15 times the mass of Earth and slightly larger than Neptune. Neptune orbits the Sun once every 164.8 years at an average distance of 30.1 astronomical units. It is named after the Roman god of the sea.</p>
+			<p>Radius: 15,299 mi</p>
+			<p>Length of day: 0d 16h 6m</p>
+			<p>Orbital period: 165 years</p>
+			<p>Welcome to Neptune! What would you like to do next?</p>
+			</div>
+			<div class="col-md-12">
+				<a data-toggle="modal" href="#neptune-m"><img src="../img/explore.png"></a>
+			</div>
+			<div class="col-md-12">
+				<a href="../game.html"><img src="../img/go_back.png"></a>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="neptune-m" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Neptune Exploration</h4>
+        </div>
+        <div class="modal-body">
+          <h4>Neptune is a massive gas giant and is so far from the other planets that only pirates ever venture here. And even those rarely come this way.</h4>
+          <h4>You found some scraps of hull plating, probably from a pirate ship destroyed by Martian Navy patrols. Use them to repair your armor. Health + 25</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="m-c" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <script type="text/javascript">
+		$("#m-c").click(function(){
+			var health = Number(localStorage.getItem("health"));
+			health += 5;
+			localStorage.setItem("health",health);
+		});
+	</script>
+
+</body>
+</html>

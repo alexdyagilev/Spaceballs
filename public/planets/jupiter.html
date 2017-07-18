@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jupiter</title>
+	<!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!--My CSS Stylesheet link-->
+    <link rel='stylesheet' type='text/css' href='../css/style.css'>
+</head>
+<body>
+
+	<div class="container">
+		<div class="col-md-12">
+			<img src="../img/planets/jupiter_title.png">
+		</div>
+		<div class="col-md-5">
+			<img src="../img/planets/jupiter_big.png">
+		</div>
+		<div class="col-md-2"></div>
+		<div class="col-md-5">
+		<div class="row">
+			<div class="col-md-12">
+			<p>Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a giant planet with a mass one-thousandth that of the Sun, but two and a half times that of all the other planets in the Solar System combined. Jupiter and Saturn are gas giants; the other two giant planets, Uranus and Neptune are ice giants. Jupiter has been known to astronomers since antiquity. The Romans named it after their god Jupiter. When viewed from Earth, Jupiter can reach an apparent magnitude of -2.94, bright enough for its reflected light to cast shadows, and making it on average the third-brightest object in the night sky after the Moon and Venus.</p>
+			<p>Radius: 43,441 mi</p>
+			<p>Length of day: 9h 56m</p>
+			<p>Orbital period: 12 years</p>
+			<p>Welcome to Jupiter! What would you like to do next?</p>
+		</div>
+		</div>
+			<div class="col-md-12">
+				<a data-toggle="modal" href="#jupiter-m"><img src="../img/explore.png"></a>
+			</div>
+			<div class="col-md-12">
+				<a href="../game.html"><img src="../img/go_back.png"></a>
+			</div>
+			</div>
+	</div>
+
+	<div class="modal fade" id="jupiter-m" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Jupiter Exploration</h4>
+        </div>
+        <div class="modal-body">
+          <h4>Jupiter by itself is not habitable due to its storms and high level of radiation. However, many of its moons have been colonized and have agricultural domes where plants grow and supply the outer planets with food.</h4>
+          <h4>You found an armor upgrade on Europa, one of the many Jovian moons. Health has been increased by 50.</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="m-c" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <script type="text/javascript">
+		$("#m-c").click(function(){
+			var health = Number(localStorage.getItem("health"));
+			health += 50;
+			localStorage.setItem("health",health);
+		});
+	</script>
+
+</body>
+</html>

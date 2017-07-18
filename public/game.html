@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spaceballs Game!</title>
+        <!--Bootstrap layout link-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!--jQuery link-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!--Google fonts links-->
+        <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
+        
+        <!--My CSS Stylesheet link-->
+        <link rel='stylesheet' type='text/css' href='css/style.css'>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href=""><h2 id="current-user">USERNAME</h2></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><h3><a href="game_over.html">Save and Exit</a></h3></li>
+                    </ul>
+                    </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+                <div class="container">
+                    <div class="row">
+                    <div class="col-md-2">
+                        <div class="panel">
+                        <div class="panel-body">
+                            <h2>Ship Stats</h2>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="stats">
+                            <h3>Health: </h3><h3 id="health">--</h3>
+                            <h3>Weapon: </h3><h3 id="weapon">--</h3>
+                            <h3>Speed: </h3><h3 id="speed">--</h3>
+                            <h3>Crew: </h3><h3 id="crew">--</h3>
+                            <h3>Pirate Kills: </h3><h3 id="kills">--</h3>
+                        </div>
+                        </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-8 grid">
+                        
+                        <canvas id="GameMap" width="750" height= "750" style = "border:5px solid green">
+                        <p>Your browser doesn’t currently support HTML5 Canvas. 
+                        Please check caniuse.com/#feat=canvas for information on 
+                        browser support for canvas.</p> </canvas>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="panel">
+                        <div class="panel-body">
+                            <h2>Events Console</h2>
+                        </div>
+                        <div class="panel-footer">
+                        <div class="events">
+                            <h3 id="target-move">Attacked By Pirates! ... or something else</h3>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-md-12">
+                        <h3>Quick Links to Other Pages</h3>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1">
+                        <a href="./planets/mercury.html"><h3>Mercury</h3></a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="./planets/venus.html"><h3>Venus</h3></a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="./planets/earth.html"><h3>Earth</h3></a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="./planets/mars.html"><h3>Mars</h3></a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="./planets/jupiter.html"><h3>Jupiter</h3></a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="./planets/saturn.html"><h3>Saturn</h3></a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="./planets/uranus.html"><h3>Uranus</h3></a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="./planets/neptune.html"><h3>Neptune</h3></a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="./planets/pluto.html"><h3>Pluto</h3></a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="./battle.html"><h3>Battle</h3></a>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </body>
+            <script type="text/javascript" src="./js/GameMovement.js"></script>
+            <script type="text/javascript">
+
+                document.getElementById("current-user").innerHTML = localStorage.getItem("username");
+                document.getElementById("health").innerHTML = localStorage.getItem("health");
+                document.getElementById("weapon").innerHTML = localStorage.getItem("weapon");
+                document.getElementById("speed").innerHTML = localStorage.getItem("speed");
+                document.getElementById("crew").innerHTML = localStorage.getItem("crew");
+                document.getElementById("kills").innerHTML = localStorage.getItem("kills");
+
+            </script>
+        </html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Earth</title>
+
+	<!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!--My CSS Stylesheet link-->
+    <link rel='stylesheet' type='text/css' href='../css/style.css'>
+</head>
+<body>
+
+	<div class="container">
+		<div class="col-md-12">
+			<img src="../img/planets/earth_title.png">
+		</div>
+		<div class="col-md-5">
+			<img src="../img/planets/earth_big.png">
+		</div>
+		<div class="col-md-2"></div>
+		<div class="col-md-5">
+			<div class="row">
+			<div class="col-md-12">
+			<p>Earth, otherwise known as the World or the Globe, is the third planet from the Sun and the only object in the Universe known to harbor life. It is the densest planet in the Solar System and the largest of the four terrestrial planets.</p>
+			<p>Radius: 3,959 mi</p>
+			<p>Length of day: 24h</p>
+			<p>Orbital period: 365 days</p>
+			<p>Welcome to Earth! What would you like to do next?</p>
+			</div>
+			<div class="col-md-12">
+				<a data-toggle="modal" href="#earth-m"><img src="../img/explore.png"></a>
+			</div>
+			<div class="col-md-12">
+				<a href="../game.html"><img src="../img/go_back.png"></a>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="earth-m" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Earth Exploration</h4>
+        </div>
+        <div class="modal-body">
+          <h4>Earth is the cradle of humanity and is governed by the UN. There is currently a peace treaty between Earth and Mars so your Martian frigate will not be fired upon.</h4>
+          <h4>5 Martian marines in the embassy asked to be assigned to your ship. Crew has been increased by 5.</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="m-c" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <script type="text/javascript">
+		$("#m-c").click(function(){
+			var crew = Number(localStorage.getItem("crew"));
+			crew += 5;
+			localStorage.setItem("crew",crew);
+		});
+	</script>
+
+</body>
+</html>
